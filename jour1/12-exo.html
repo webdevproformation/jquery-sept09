@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       <!-- table>tr*5>td*3>lorem3-->
+        <table>
+            <tr>
+                <td>Lorem, ipsum dolor.</td>
+                <td>Ducimus, accusamus vitae.</td>
+                <td>Unde, vel modi?</td>
+            </tr>
+            <tr>
+                <td>Animi, dolore ex.</td>
+                <td>Assumenda, consequuntur quo.</td>
+                <td>Corrupti, ab deserunt!</td>
+            </tr>
+            <tr>
+                <td>Impedit, ex laborum.</td>
+                <td>Nisi, atque cumque!</td>
+                <td>Quod, obcaecati et!</td>
+            </tr>
+            <tr>
+                <td>Sunt, saepe reprehenderit!</td>
+                <td>Nemo, odit consectetur?</td>
+                <td>Perspiciatis, tenetur harum.</td>
+            </tr>
+            <tr>
+                <td>Dolorum, aperiam facilis!</td>
+                <td>Eveniet, veniam? Molestias.</td>
+                <td>Doloremque, nemo quidem?</td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // réaliser les modifications suivantes :
+        // ajouter dans la première colonne de chaque ligne l'icone suivant 💘
+
+        $("tr td:first-child").prepend("💘 ");
+
+        //  ajouter dans la dernière cellule du tableau l'icone 🐕
+
+        $("td").last().html("🐕");
+
+    </script>
+</body>
+</html>
