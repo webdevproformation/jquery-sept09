@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titre"></h1>
+    <ul>
+        <li class="first"></li>
+        <li class="item"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+    <script>
+        /*
+        pour l'élément qui a l'id titre 
+            ecrire le texte découverte de jQuery
+        pour le premier li de la page    écrire le texte Salade
+        pour les dernier li de la page écrire le texte Pomme
+        pour le 2ème et le 3ème li de la page écrire Tomates
+        pour tous les li de la page vous allez les souligner 
+        */
+       $("#titre").html("découverte de jQuery");
+       
+       $(".first").html("Salade");
+        // équivalent
+       $("li").first().html("Salade");
+
+       $("li").last().html("Pomme");
+
+      // $(".item").html("Tomates");
+       // équivalent 
+       $("li").eq(1).html("Tomates");
+       $("li").eq(2).html("Tomates") ;
+
+        for(let i = 1; i <=2 ; i++){
+            $("li").eq(i).html("Tomates") ;
+        }
+        // tous les li sont soulignés 
+        $("li").css("text-decoration", "underline");
+       
+    </script>
+</body>
+</html>
