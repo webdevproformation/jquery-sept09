@@ -45,6 +45,15 @@
         // la ligne suivante ne peut pas fonctionner
         // $("h2").css("border", 2px solid green);
         // il faut les mettre en doubles quotes
+
+        // lorsque l'on utilise le chainage, il est possible de sauter des lignes
+
+        $("h2").html("Conclusion").css("font-size" , 30) ;
+
+        // équivalent de la ligne précédente mais en faisant des sauts de ligne 
+        $("h2")
+            .html("Conclusion")
+            .css("font-size" , 30) ;
     </script>
 </body>
 </html>
