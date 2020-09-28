@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+       
+    </style>
 </head>
 <body>
     <div class="container">
@@ -51,7 +54,9 @@
         // équivalent
         $("ul>li").eq(1).html("bootstrap");
  
+
         $(".jour li").html("02/12/2019"); // ne pas oublier le li dans le selecteur
+
 
         $(".annee li").first().html("bonjour");
         // équivalent
@@ -60,6 +65,13 @@
         $(".annee li").last().html("final");
         // équivalent
         $("ol:last-child li:last-child").html("final")
+
+        // rdv 16h15 bonne pause !!
+        // centrer les listes dans la page en 
+        // jQuery
+        $("section").css("display", "flex")
+                    .css("margin", "0 auto")
+                    .css("width" , 300) ;
     </script>
 
 </body>
