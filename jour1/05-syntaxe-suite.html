@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+    <script>
+        // principales syntaxes nouvelles qu'apporte jQuery 
+
+        // $("sélecteur css")
+        $("h1").html("titre principal de la page") // permet de sélectionner n'importe quelle balise
+
+        // ce sélecteur jquery fait AUTOMATIQUEMENT une boucle 
+        // 3 paragraphes 
+        // en javascript de base => voilà ce qu'il faut ecrire 
+        // pour remplir tous les paragraphes de la page
+        let ps = document.querySelectorAll("p");
+        for(let i = 0 ; i < 3 ; i++){
+            ps[i].innerHTML = "un texte";
+        }
+        // en jQuery => 1 seule ligne est suffisante 
+        $("p").html("un texte ajouté via jQuery");
+
+        // 3 syntaxe de base est la suivante :
+        
+        // en javascript natif 
+        // la première balise li => 
+        // ajouter du texte à l'intérieur et on veut modifier la taille
+        // de police
+        let li = document.querySelector("li");
+        li.innerHTML = "un peu de texte";
+        li.style["font-size"] = "40px";
+
+        // en jQuery 
+        // chainage => chainer les instructions les uns aux autres 
+        $("li").first().html("autre texte avec jquery").css("font-size", 15);
+        // 1 seule instruction => javascript natif j'ai besoin de 3 instructions 
+        // évite de vous répéter ! 
+    </script>
+</body>
+</html>
+
+<!-- 
+    06-exo.html 
+
+    dans ce fichier vous allez avoir le html suivant
+
+    1/ h1 qui a class intro
+    2/ deux p 
+    3/ img class miniature et un attribut src="https://via.placeholder.com/200"
+
+    via jQuery vous allez modifier le DOM de la manière suivante :
+
+    sélectionner l'élément qui a la class h1 et remplir avec le texte Introduction
+    sélectionner les deux paragraphes et ajouter leur le texte "bonjour" et les mettre en gras
+    selectioner l'image qui a la class miniature et lui mettre une bordure 1px solid red 
+-->
