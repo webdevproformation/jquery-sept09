@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ol class="jour">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+            <ol class="annee">
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+            </ol>
+        </section>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+    <script>
+        /*
+    remplir le 1er li du ul avec le texte jquery
+    remplir le 2eme li du ul avec le texte bootstrap
+    remplir tous les li de l'élément avec la class jour avec le texte : 02/12/2019
+    pour la dernière liste, remplir le premier li avec le texte : bonjour
+    pour la dernière liste, remplir le dernier li avec le texte : final
+        */
+
+        $("ul li:first-child").html("jquery");
+        // équivalent
+        $("ul li").first().html("jquery") ;
+        // équivalent
+        $("ul>li").first().html("jquery");
+
+
+        $("ul li").eq(1).html("bootstrap");
+        // équivalent
+        $("ul li:nth-child(2)").html("bootstrap");
+        // équivalent
+        $("ul>li").eq(1).html("bootstrap");
+ 
+        $(".jour li").html("02/12/2019"); // ne pas oublier le li dans le selecteur
+
+        $(".annee li").first().html("bonjour");
+        // équivalent
+        $("ol:last-child li:first-child").html("hello");
+
+        $(".annee li").last().html("final");
+        // équivalent
+        $("ol:last-child li:last-child").html("final")
+    </script>
+
+</body>
+</html>
