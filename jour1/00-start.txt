@@ -1,0 +1,117 @@
+bonjour
+
+gros technique ce matin 
+le cours va commencer à partir de 10h40 
+(je n'ai pas pu me connecter non plus / personne n'a pas se connecter )
+
+-----------------------------
+Sur le bureau de votre Ordinateur :
+
+créer le dossier jquery
+Dans ce dossier,  créer le dossier jour1
+ouvrir ce dossier dans Visual Studio code 
+
+-----------------------------
+
+je vous ai préparé un support de cours => 
+url : https://formation.webdevpro.net/jquery/
+login : jquery
+mdp : query
+
+=> je vais créer un nouveau repository github pour 12h00 
+dans lequel vous aurez toutes mes notes + corrigés ....
+
+-----------------------------
+
+=> Présentation de jQuery (qu'est ce que s'est ????)
+
+Librairie = fichier dans lequel vous allez stocker plein de fonctions 
+=> toutes les fonctions sont écrites en Javascript 
+
+function html(){
+    // ......
+}
+
+=> présenter le maximum de fonctions qui sont disponibles dans ce fichier 
+
+=> en 2006 // informaticien  John Resig => 22 ans 
+
+=> rôle central de cette librairie => faciliter la vie des développeurs pour accéder et modifier le DOM 
+
+=> DOM : Document Object Model => représentation de la page web 
+
+=> accéder au DOM (page web) => ( la semaine dernière => utilisé du javascript de base / natif / vanille)
+=>   document.querySelector() .....
+
+=> c'est au lieu de saisir document.querySelector()   
+=> le symbole $() <= il y a de forte chance que vous êtes en train d'utiliser jQuery
+
+ utiliser la fonction jquery :  $() <= LA FONCTION jquery qui va nous permettre d'accéder au DOM !! 
+
+js natif => document.querySelector() 
+jQuery => $() 
+
+=> tu vas voir jQuery peut être mélangé avec du js 
+=> moi je vais vous présenter le maximum de jQuery 
+=> boucle while / for // if  //  variable et les types => javascript 
+=> les deux de la semaine dernières => DOM 
+=> les variables / les boucles / les types / boolean / condition if else if else ... / fonction / objet / tableau => javascript de bases : que vous utilisiez javascript de base OU jQuery => ça ne change pas 
+
+=> c'est vraiment sur les deux dernières jours de la semaine dernière => nouvelles syntaxes à apprendre 
+
+------------------------------------
+
+=> jQuery est une librairie TRES populaire => utilisés par les développeurs ET très présente dans tous les sites 
+
+=> https://w3techs.com/technologies/overview/javascript_library
+
+=> site internet géré par l'organisme en charge des normes du web : W3C (association => comment on écrit du html )
+=> W3school 
+=> statisques quoditiennes sur : 3/4 des sites les plus populaires dans le monde utilisent jQuery
+
+Pourquoi cette position ?? 
+
+1/ => le slogan de js => Write Less Do More => écrire moins et faire plus 
+=> pour développeur Ecrire beaucoup moins => faire autant voire plus 
+
+2/ Historiquement, les navigateurs chrome / IE / Firefox ... 
+jusqu'en 2015 (avant l'arrivée de javascript 6)
+=> écrire une version de javascript 
+=> IE document.querySelector() // Firefox document.getElementById()
+
+=> jQuery Garantir que quelque soit le navigateur => votre code va fonctionner => COMPATIBILITE de votre code quelquesoit le navigateur web qui va le lire !! 
+
+3/ Communauté et Documentation : jQuery discuter facilement avec d'autres développeurs // 
+                                 forum de discussion / site / groupe d'entraide ... sur jQuery 
+                                 => le site internet de référence présente la librairie https://jquery.com/
+                                 => très clair
+                                 => facile apprendre (si vous avez déjà vu javascript de base) 
+    Favoriser son développement 
+
+=> très forte chance que jQuery soit utilisé
+------------------------------------
+
+lien entre comment écrire la fonction en javascript de base et équivalent en jQuery
+
+------------------------------------
+
+jQuery a des concurrents => scriptaculous / dojo / prototype
+
+https://w3techs.com/technologies/overview/javascript_library => les chiffres d'utilisations sont faibles 
+
+Mais beaucoup moins populaire de jQuery 
+
+Ruby => langage pour créer des sites internet 
+dans la guerre entre les langages => pas très populaire 
+comme PHP 
+
+------------------------------------
+
+Outil pour coder => 
+visual studio // pas besoin d'installer des extensions en plus 
+
+------------------------------------
+
+Fin l'introduction => créer premier script avec jquery 
+
+=> dans le dossier jour1, créer le fichier 01-hello-world.html

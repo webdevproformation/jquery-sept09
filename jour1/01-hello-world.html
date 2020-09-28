@@ -1,0 +1,67 @@
+<!-- 
+    aller sur le site officielle de jQuery
+    et on va récupérer le code de base d'une page html avec jquery 
+    https://jquery.com => à saisir dans la barre d'adresse 
+
+    cliquer sur le lien Download 
+    => télécharger 
+
+    cette page présente 5 manières
+    d'ajouter jquery dans vos projets 
+
+    présenter 3 manières d'ajouter jquery 
+
+    première manière
+
+    jQuery
+
+    cliquer sur le lien Download the compressed, production jQuery 3.5.1
+
+    sélectionne tout le contenu de la page
+    Ctrl + A 
+    Ctrl + C
+
+    => copier les sources de jquery et je vais les coller dans un fichier .js
+    => créer un fichier dans le dossier jour1 => jquery.js 
+    coller à l'intérieur à l'intérieur le code source de la librairie jquery
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script src="jquery.js"></script>
+    <script>
+        // si le bouton Go Live n'est pas présent 
+        // fermer et ouvrir Visual Studio 
+        // autre solution clique droite dans la zone bleue en bas
+        // cocher Live Server (extension)
+        $("p").html("Hello World !");
+
+        // en javacript de base 
+        // équivalent 
+        document.querySelector("p").innerHTML = "Hello World !" ;
+
+        // jquery est plus court 
+        // slim 
+        // encodage => utf8 
+        // encodage => comment le disque dur va stocker les caractères que vous mettez 
+        // dans vos fichiers ? 
+        // choisir toujours utf8
+    </script>
+</body>
+</html>
+<!-- 
+    créer le fichier 01-exo.html
+
+    dans ce fichier 
+    1 une balise h1 vide 
+    2 appeler la librairie jquery via la balise script avec l'attribut src 
+    3 créer une nouvelle balise script
+        utiliser la fonction jquery $()
+        remplir la balise h1 avec le texte suivant : "mon premier script jQuery" 
+-->

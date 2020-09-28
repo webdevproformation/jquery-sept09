@@ -1,0 +1,44 @@
+<!-- 
+    la deuxième manière d'importer jquery dans un projet 
+    est d'utiliser un CDN 
+
+    CDN => Content Data Network 
+    Serveur qui sont mis à disposition gratuitement par de grandes sociétés : Google / Facebook ...
+    
+    appeler et télécharger jquery directement depuis une adresse web 
+
+    dans la documentation officielle 
+    lien Download > dans la section "Using jQuery with a CDN"
+
+    => celui proposé par Google
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("h1").html("jquery depuis un CDN");
+        // au lieu de télécharger en local jQUery
+        // utiliser le fichier stocké sur un serveur chez Google 
+        // dans le cadre de ce cours nous allons utiliser cette dernière méthode
+        // la méthode 1 fonctionne très bien aussi !!! 
+    </script>
+</body>
+</html>
+
+<!-- 
+    créer le fichier 03-exo.html
+
+    1 créer une balise p 
+    2 télécharger jquery depuis le CDN de Microsoft
+    3 créer une balise script
+        remplir la balise p avec le texte suivant
+            utilisation de CDN pour modifier le DOM
+-->
