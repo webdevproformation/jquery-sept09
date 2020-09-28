@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="intro"></h1>
+    <p></p>
+    <p></p>
+    <img src="https://via.placeholder.com/200" class="miniature" alt="">
+    <h2></h2>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+    <script>
+
+        /*
+            sélectionner l'élément qui a la class h1 et remplir avec le texte Introduction
+            sélectionner les deux paragraphes et ajouter leur le texte "bonjour" et les mettre en gras
+            selectioner l'image qui a la class miniature et lui mettre une bordure 1px solid red 
+        */
+        $("h1").html("Introduction") ;
+        // équivalent
+        $(".intro").html("Introduction") ;
+
+        // les paragraphes
+        $("p").html("bonjour").css("font-weight", "bold") ;
+
+        // pour l'image
+        $("img").css("border" , "1px solid red") ;
+        // équivalent
+        $(".miniature").css("border" , "1px solid red") ;
+
+        // jQuery => faciliter la vie développeur (écrire moins)
+
+        // ajouter une balise h2 juste après la balise image
+        // si jamais j'ai une règle css
+        $("h2").html("Conclusion").css("font-size" , 30) ;
+        $("h2").html("Conclusion").css("font-size" , "30px") ;
+        // attention bien coller le 30 et le px
+        $("h2").css("margin-left", 20);
+        $("h2").css("margin-left", "20px");
+
+        $("h2").css("border", "2px solid green");
+        // la ligne suivante ne peut pas fonctionner
+        // $("h2").css("border", 2px solid green);
+        // il faut les mettre en doubles quotes
+    </script>
+</body>
+</html>
