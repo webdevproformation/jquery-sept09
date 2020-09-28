@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 07-element.html -->
+    <!-- 
+        méthode n°1  => créer un fichier jquery.js => copier dedans tout le code de jquery
+        local => l'avantage => tout en local // travailler sans connexion internet
+        
+        méthode n°2 => lien vers un CDN
+        lien sûr 
+        si jamais l'internaute va sur d'autres sites
+        le navigateur ne va pas la recharger 
+        désavantage => tu as besoin d'une connexion à internet (par exemple dans un Avion)
+        p*5
+    -->
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js"></script>
+    <script>
+        // rempli les 5 paragraphes avec le texte "lorem ipsum"
+        $("p").html("lorem ipsum");
+
+        // remplir uniquement le premier p uniquement
+        // javascript de base
+        document.querySelectorAll("p")[0].innerHTML = "premier"
+        
+        $("p").first().html("premier en jquery");
+
+        // remplir uniquement le dernier p 
+        $("p").last().html("dernier paragraphe");
+
+        // troisième p
+        // eq = equal = égal
+        $("p").eq(2).html("troisième élement");
+
+        // autre syntaxe possible pour le premier élément
+        $("p").eq(0).html("modification via eq");
+    </script>
+</body>
+</html>
+<!-- 
+    08-exo.html 
+    créer une nouvelle page 
+
+    html (jquery => Manipuler facilement le DOM !!!)
+    h1 qui a l'id titre
+    liste <ul> ayant 5 li
+        le premier li class first
+        le deuxième li class item
+        les autre li n'ont pas pas de class
+
+    en jquery vous allez réaliser les modifications du DOM suivantes :
+
+        pour l'élément qui a l'id titre 
+            ecrire le texte découverte de jQuery
+        pour le premier li de la page    écrire le texte Salade
+        pour les dernier li de la page écrire le texte Pomme
+        pour le 2ème et le 3ème li de la page écrire Tomates
+        pour tous les li de la page vous allez les souligner 
+-->
