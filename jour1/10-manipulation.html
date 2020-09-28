@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- p.item$*5>lorem3 -->
+    <h1></h1>
+    <p class="item1">Lorem, ipsum dolor.</p>
+    <p class="item2">Possimus, perferendis. Cupiditate?</p>
+    <p class="item3">Quasi, amet neque!</p>
+    <p class="item4">Consequuntur, dignissimos ratione?</p>
+    <p class="item5">Modi, facilis fugit.</p>
+    <!-- utiliser le cdn du site : cdnjs.com -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // pour écrire dans une balise html 
+        // méthode .html()
+        // jQuery introduit d'autres méthodes pour écrire
+        // dans les balises
+        // 5 autres méthodes pour écrire dans le DOM : 
+        // .text()
+        // .after()
+        // .before()
+        // .append()
+        // .prepend()
+        $(".item1").text("écrire que du texte <br> un peu de texte");
+        // la méthode .text() ne va pas interpréter les balises écrite dans la fonction
+        $(".item2").html("un peut de texte <br> avec un saut de ligne");
+        // méthode .html() interprête les balies html 
+
+        // .after() et .before()
+        // permet d'écrire HORS la balise after() =>    après et before() =>  avant la balise 
+
+        $(".item3").before("<hr>");
+        $(".item3").after(" fin");
+
+        // ajouter la balise button AVANT la balise qui a la class .item4
+        $(".item4").before("<button>Menu</button>");
+
+        // append() et prepend()
+        // ajouter append() => à la fin de la balise
+        // prepend() => au début de la balise
+
+        $(".item5").prepend("- ");
+        // Google emijipedia // https://emojipedia.org/https://emojipedia.org/
+        $(".item5").append(" 🕴️") ;
+
+        // ajouter au début de la balise sélectionnée
+        $(".item5").prepend("⚽ ");
+
+        $("h1").html("⚽ titre principal")
+
+        $("title").prepend("⚽ ");
+    </script>
+</body>
+</html>
