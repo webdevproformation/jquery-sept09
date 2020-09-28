@@ -20,6 +20,8 @@
     <script>
     // écrire ici le script jQuery
         $("#intro").html("Un autre texte");
+        // autre possibilité vue qu'il n'y a pas de balise dans le texte
+        $("#intro").text("Un autre texte");
 
         $("h2").before("<hr>");
 
@@ -28,3 +30,25 @@
     </script>
 </body>
 </html>
+
+<!-- 
+    12-exo.html
+
+    ce fichier contient :
+    .container 
+        tableau <table>   
+        5 lignes
+            3 colonnes
+                lorem3 mots
+
+    en jquery réaliser les modifications suivantes :
+
+    ajouter dans la première colonne de chaque ligne l'icone suivant 💘
+    ajouter dans la dernière cellule du tableau l'icone 🐕
+-->
+
+<table>
+    <tr><!-- table row = alignement = ligne -->
+        <td></td> <!-- table div = cellule de tableau -->
+    </tr>
+</table>
