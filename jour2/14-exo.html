@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-color="green" data-texte="Action 1" class="btn1"></button>
+    <button data-size="22" data-texte="Action 2" class="btn2"></button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $("button").each(function(index , item){
+            let texte = $(item).data("texte");
+            $(item).html( texte );
+        });
+
+        // équivalent
+        let textBtn1 = $(".btn1").data("texte")
+        $(".btn1").html(textBtn1) ;
+        let textBtn2 = $(".btn2").data("texte")
+        $(".btn2").html(textBtn2) ;
+
+        /*$("button").first().on("click", function(){
+            let color =  $("button").first().data("color");
+            $("button").first().css("color" , color) ;
+        });*/
+
+        // this 
+
+        $("button").first().on("click", function(){
+            let color =  $(this).data("color");
+            $(this).css("color" , color) ;
+        });
+
+        $("button").last().on("click", function(){
+            let size = $("button").last().data("size");
+            $("button").last().css("font-size" , size ) ;
+        });
+
+        // this => javascript natif 
+
+        $("button").last().on("click", function(){
+            let size = $(this).data("size");
+            $(this).css("font-size" , size ) ;
+        });
+
+
+    </script>
+</body>
+</html>
