@@ -30,7 +30,7 @@
         // 2ème syntaxe possible 
         $(".valeur").on("keydown", function(){});
         $(".carre")
-            .css({ "width" : 200 , height : 200 , "background" : "red"});
+            .css({ "width" : 200 , "height" : 200 , "background" : "red"});
 
         // mouse enter => au moment où la souris rentre dans la balise
         $(".carre").mouseenter(function(){
@@ -44,7 +44,27 @@
         $(".prenom").change(function(){
             let contenuChamp = $(".prenom").val();
             $(".message2").html(contenuChamp);
-        })
+        });
+        // balise canvas 
     </script>
+    <canvas></canvas>
+    <!-- cours à part -->
 </body>
 </html>
+<!--
+    créer le fichier 16-exo.html 
+
+    input de type number et class valeur1
+    input de type number et class valeur2
+    input de type number et de class résultat
+
+    en jquery vous allez réaliser les actions suivantes
+
+    au moment où vous modifier le contenu de l'élement qui a la class valeur1 alors effectuer le calcul suivant
+
+    valeur saisie dans le champ qui a la class valeur1 multiplié par la valeur saisie dans le champ qui a la class valeur2 => dans le champ resultat
+
+    au moment où vous modifier le contenu de l'élement qui a la class valeur2 alors effectuer le calcul suivant
+
+    valeur saisie dans le champ qui a la class valeur2 multiplié par la valeur saisie dans le champ qui a la class valeur1 => dans le champ resultat
+-->
