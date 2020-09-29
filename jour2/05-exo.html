@@ -6,11 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    
     <button></button>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
+        //$("button").html("eoifezioh")
 
         $("button").wrap("<header></header>").text("Menu");
+        // solution alternative wrap() juste avant 
+        //$("button").wrap("<header>").text("Menu");
 
         // concaténer 
         let menu =  "<ul>";
@@ -24,8 +28,15 @@
         //$("button").after("<ul><li>Accueil</li><li>Contact</li></ul>");
 
         $("header").css("border", "1px solid green")
-                    .css("box-shadow" , "2px 2px 5px grey");
+                   .css("box-shadow" , "2px 2px 5px grey");
 
+         //  $("header").html("titre 111");
+
+         // composant = plugin jquery 
     </script>
 </body>
 </html>
+<!-- 
+    fin chapitre manipulation DOM
+    => les attributs 
+-->
