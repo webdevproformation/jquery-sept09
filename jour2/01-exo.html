@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    </head>
+    <body>
+    <h1 id="titre">Menu</h1>
+    <ul>
+        <li><a href="#">Lorem ipsum dolor.</a></li>
+        <li class="item"><a href="#">Nulla, modi, beatae?</a></li>
+        <li><a href="#">Illum, iste, explicabo!</a></li>
+        <li><a href="#">Debitis, deleniti, id?</a> <a href="#">Debitis, deleniti, id?</a> <a href="#">Debitis, deleniti, id?</a> <a href="#">Debitis, deleniti, id?</a></li>
+        <li><a href="#">Facilis, sapiente, ad.</a></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        /*
+        1 modifier le contenu textuel du <a href=""> du 1er <li> par "nouvel article"
+        2 modifier le contenu textuel du 3ème <a href=""> de la page par le bloc de html suivant : "<b>information technique</b>"
+        3 modifier le contenu textuel du dernier <a href=""></a> par le texte "fin"
+        4 modifier le contenu de l'élément ayant la class .item par le bloc de html suivant :
+        "<p>un peu de texte ajouté via le script</p>""
+        5 Ajouter un préfix  (avant )et un suffixe (après) au titre principal, <h1> de la page
+        6 Ajouter une balise <hr> après <h1>
+        7 Ajouter un paragraphe avant <h1> avec le texte <p>lorem ipsum </p>
+        */
+        
+        // question 1
+        $("li:first-child a").html("nouvel article");
+        // vu que ce n'est que du texte 
+        $("li:first-child a").text("nouvel article");
+        
+        // question 2
+        $("a").eq("2").html("<b>information technique</b>");
+        $("a").eq(2).html("<b>information technique</b>");
+        $("a:nth-child(3)").html("<b>information technique</b>");
+
+        // question 3  
+        $("a").last().text("fin") ;
+
+        // question 4
+        $(".item").html("<p>un peu de texte ajouté via le script</p>");
+
+        // Question 5 utilisation du chainage et 6 et 7 en même temps
+
+        $("h1")
+            .prepend("prefixe ")
+            .append(" suffixe")
+            .after("<hr>")
+            .before("<p>lorem ipsum </p>") ; // attention le point virgule à la fin uniquement !!
+            
+    </script>
+    </body>
+</html>
