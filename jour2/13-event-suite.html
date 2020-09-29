@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">Action 1</button>
+    <button class="btn2">Action 2</button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // 13-event-suite.html 
+
+        // en jquery existe autre manière d'ajouter 
+        // des événéments sur des balises html 
+
+        // 1ère syntaxe possible 
+        $(".btn1").click(function(){});
+
+        // 2ème syntaxe => équivalent, une autre manière de l'écrire
+        $(".btn2").on("click", function(){});
+        // pas de différence en terme de fonctionnement
+    </script>
+</body>
+</html>

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .hide{
+            display: none
+        }
+    </style>
 </head>
 <body>
     <button class="action1">Action 1</button>
@@ -25,9 +30,16 @@
         $(".action2").click(function(){
             // masquer un élement
             // display : none
-            $(".p2").css("display", "none");
+            //$(".p2").css("display", "none");
+            // 2ème manière ajouter une class à la balise et ajouter la règle .hide{}
+            // dans css
+            $(".p2").addClass("hide");
+            // 3ème manière de faire via la méthode .hide() animation 
+            $(".p1").hide();
+            // 4 eme solution .toggle() animation 
         });
 
     </script>
 </body>
 </html>
+<!--  13-event-suite.html -->
