@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="action1">Action 1</button>
+    <button class="action2">Action 2</button>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // événement
+        // en javascript natif
+        document.querySelector(".action1").addEventListener("click", function(){});
+
+        // jquery => beaucoup plus court
+        $(".action2").click(function(){
+            alert("le bouton 2 est cliqué !");
+        });
+
+        // nouvelle syntaxe => juste après 
+        $(".action2").on("click", function(){})
+    </script>
+</body>
+</html>
+<!-- 
+    créer le fichier 12-exo.html
+    Dans ce fichier un bouton ayant la class action1
+    puis un paragraphe qui a la class p1 et qui contient le texte premier paragraphe
+
+    Dans ce fichier un bouton ayant la class action2
+    puis un paragraphe qui a la class p2 et qui contient le deuxième premier paragraphe
+
+    en jquery
+    si je clique sur le bouton action1
+    modifier la taille de la police de p1 => 40px // ajouter une bordure de 1px solid red
+
+    si je clique sur le bouton action 2
+    masquer le paragraphe p2 
+
+-->
