@@ -63,5 +63,31 @@
             .after("<hr>")
             .before("<p>lorem ipsum </p>") ; // attention le point virgule à la fin uniquement !!
     </script>
+
+    <!-- 
+        la balise script
+    -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // javascript de base
+        // jquery il faut OBLIGATOIREMENT qu'une balise précédent appel jquery 
+    </script>
+    <!-- 
+        la syntaxe suivante ne fonctionne pas
+    -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+        // jquery 
+        // cette syntaxe ne fonctionne pas 
+        // on est obligé d'avoir deux balises au minimum 
+        // 1 seule balise qui appeler et utilise => ça ne marche pas 
+    </script>
+
+    <script src="">
+        // utilisation en même temps => NON ça marche pas non plus 
+    </script>
+
     </body>
 </html>
+<!-- 
+    02-jquery-header.html
+-->
