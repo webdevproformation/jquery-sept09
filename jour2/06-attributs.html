@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="" id="" ></p>
+    <img src="" alt="">
+    <h2></h2>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // jusqu'à maintenant ajouter des balises 
+        // avant après dedans à la fin / au début ...
+        // en plus s'intéressé aux attributs 
+        // javascript natif 
+        // ajouter la class intro à la balise p 
+        document.querySelector("p").classList.add("intro");
+
+        // jquery => ajouter une class
+        $("p").addClass("presentation");
+
+        // supprimer une class
+        document.querySelector("p").classList.remove("presentation");
+
+        // jquery => supprimer une class
+        $("p").removeClass("intro");
+
+        // javascript natif ajouter à la balise p l'id="formation"
+        document.querySelector("p").setAttribute("id", "formation")
+
+        // jQuery
+        $("p").attr("id", "formation");
+
+        $("img").attr("alt", "presentation image")
+                .attr("src", "http://image.jpg")
+                .attr("class", "miniature");
+
+        // équivalent de .attr() .prop()
+        $("h2").prop("class", "conclusion")
+                .prop("id", "important")
+                .prop("style", "color:blue")
+                .text("Conclusion !!!") ;
+
+    </script>
+</body>
+</html>
