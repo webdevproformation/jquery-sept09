@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="action1">Action 1</button>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, a.</p>
+
+    <button class="action2">Action 2</button>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, a.</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(".action1").click(function(){
+            let style = {
+                "font-size": 40,
+                "border" : "1px solid red"
+            }
+            $(".p1").css(style);
+        });
+
+        $(".action2").click(function(){
+            // masquer un élement
+            // display : none
+            $(".p2").css("display", "none");
+        });
+
+    </script>
+</body>
+</html>
