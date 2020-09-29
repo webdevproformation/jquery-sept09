@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>article</h2>
+        <p>Lorem ipsum dolor sit amet.</p>    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // 04-wrap.html
+        // wrap => Emballer
+        // .wrap() 
+       // $("h2").before("<article>");
+       // $("p").after("</article>") ;
+        
+        $("div").wrap("<article></article>");
+        $("article").css("border", "1px solid grey");
+    </script>
+</body>
+</html>
+<!-- 
+    créer le fichier 05-exo.html 
+
+    dans le body 
+    créer une balise button 
+
+    en jquery réaliser les modifications suivantes :
+
+    1 emballer le bouton avec la balise <header>
+
+    2 ajouter Après le button le html suivant
+
+    <ul>
+        <li>Accueil</li>
+        <li>Contact</li>
+    </ul>
+
+    3 styliser la balise header que vous avez ajouté à l'étape 1
+        bordure de 1 px solid green
+        box-shadow 2px 2px 5px grey
+
+-->
