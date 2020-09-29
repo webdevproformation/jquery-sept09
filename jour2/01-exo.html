@@ -32,7 +32,12 @@
         $("li:first-child a").html("nouvel article");
         // vu que ce n'est que du texte 
         $("li:first-child a").text("nouvel article");
-        
+        // Hakim
+        $("ul li a").first().text("nouvel article")
+        // Abdennour
+       // $("li").first().html()
+       // attention supprime la balise a qui est à l'intérieur du li
+
         // question 2
         $("a").eq("2").html("<b>information technique</b>");
         $("a").eq(2).html("<b>information technique</b>");
@@ -51,7 +56,12 @@
             .append(" suffixe")
             .after("<hr>")
             .before("<p>lorem ipsum </p>") ; // attention le point virgule à la fin uniquement !!
-            
+        // équivalent
+        $("#titre")
+            .prepend("prefixe ")
+            .append(" suffixe")
+            .after("<hr>")
+            .before("<p>lorem ipsum </p>") ; // attention le point virgule à la fin uniquement !!
     </script>
     </body>
 </html>
