@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+            // attendre que le html soit chargé AVANT exécution
+
+            $("h1")
+                .css("text-align", "center")
+                .css("text-decoration", "underline") ;
+
+            // javascript de base 
+            let jourSemaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"];
+
+            // 1ère manière
+            $("li").eq(0).html(jourSemaine[0]);
+            $("li").eq(1).html(jourSemaine[1]);
+            $("li").eq(2).html(jourSemaine[2]);
+            $("li").eq(3).html(jourSemaine[3]);
+            $("li").eq(4).html(jourSemaine[4]);
+
+            // 2ème manière => boucle qui contient du jquery
+            for(let i = 0 ; i <= 4 ; i++ ){
+                $("li").eq(i).html(jourSemaine[i]);
+            }
+
+            // 3ème jquery dispose d'un système intégrer pour les boucles
+            // .each() => permet de faire une boucle à la sauce jquery 
+            // .each(function(){ })
+            // .each(function( item , index ){ })
+            $("li").each(function(item , index){
+                item.html(jourSemaine[index]);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Formation jQuery</h1>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
