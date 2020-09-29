@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="valeur">
+    <p class="message"></p>
+    <div class="carre"></div>
+    <input type="text" class="prenom">
+    <p class="message2"></p>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // 15-event-fin.html 
+        // sur concentré sur 1 seul événement => click
+        // sachez qu'il existe d'autres événements que javascript peut récupérer 
+        // que nous pouvons utiliser dans nos scripts 
+        // écouter les actions que l'on fait avec notre clavier 
+        // 1ère syntaxe possible
+        // key touche down pressé
+        // événement est exécuté lorsque l'on appuie sur une touche
+        //e.preventDefault()
+        $(".valeur").keydown(function(e){
+            let lastKey = e.originalEvent.key;
+            $(".message").html(lastKey);
+            // e objet => { }
+        });
+        // 2ème syntaxe possible 
+        $(".valeur").on("keydown", function(){});
+        $(".carre")
+            .css({ "width" : 200 , height : 200 , "background" : "red"});
+
+        // mouse enter => au moment où la souris rentre dans la balise
+        $(".carre").mouseenter(function(){
+            $(".carre").html("la souris vient de rentrer");
+        });
+        // mouse leave // mouse out => au moment où la souris sort de la balise 
+        $(".carre").mouseleave(function(){
+            $(".carre").html("la souris vient de sortir de la zone");
+        });
+
+        $(".prenom").change(function(){
+            let contenuChamp = $(".prenom").val();
+            $(".message2").html(contenuChamp);
+        })
+    </script>
+</body>
+</html>
