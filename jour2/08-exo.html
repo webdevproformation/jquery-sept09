@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // concaténation + boucle 
+
+        let contenuPage = "";
+        for(let i = 1 ; i <= 10 ; i++){
+            contenuPage += "<div>";
+            contenuPage += "<h2>article " + i + "</h2>";
+            contenuPage += "<img src=\"\" alt=\"\">";
+            contenuPage += "</div>";
+        }
+        console.log(contenuPage);
+        $(".container").html(contenuPage);
+
+        for(let i = 0 ; i <= 4 ; i++){
+            $(".container div").eq(i).css("border", "1px solid grey");
+        }
+        
+        for(let i = 5 ; i <= 9 ; i++){
+            $(".container div h2").eq(i).css("font-size", 20);
+        }
+
+        $("img").prop("src", "https://via.placeholder.com/400x200");
+
+    </script>
+</body>
+</html>
