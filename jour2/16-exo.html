@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input.valeur$*2 -->
+    <input type="number" class="valeur1">
+    x
+    <input type="number" class="valeur2">
+    =
+    <input type="number" class="resultat">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(".valeur1").change(function(){
+                // javascript natif 
+                // document.querySelector(".valeur1").value = 2
+                // jQuery 
+                // $(".valeur1").val(2)
+              let resultat =  $(".valeur1").val() * $(".valeur2").val();
+              $(".resultat").val( resultat );
+        });
+
+        $(".valeur2").change(function(){
+            let resultat = $(".valeur1").val() * $(".valeur2").val();
+            $(".resultat").val( resultat );
+        })
+    </script>
+</body>
+</html>
