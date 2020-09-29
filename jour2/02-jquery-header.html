@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 
+        jusqu'à présent on a toujours écrit les deux balises scripts
+        à côté de la balise fermante body 
+        écrire dans la balise head => appeler du css 
+    -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // écrire du jquery
+        // si jamais vous souhaitez écrire votre code dans la balise head de votre page web
+        // document => document.querySelector()
+        $(document).ready(function(){
+            // écrire votre jquery
+            // attend que le DOM = html soit chargé avant d'exécuter le code jquery
+            $("p").html("bonjour");
+            // attendre que le html soit dans la mémoire du navigateur avant de s'exécuter 
+        });
+        $("p").append(" les amis"); // exécuté avant que le html soit chargé 
+        // donc il n'arrive pas à s'exécuter dans la page 
+
+        $(document).ready(function(){
+            $("p").prepend(" Comment allez vous ? ");
+            // écrire votre jquery
+            // attend que le DOM = html soit chargé avant d'exécuter le code jquery
+        });
+
+        // dernière version du ready function plus courte 
+        $(function(){
+            $("p").css("font-size", "30px");
+        });
+
+    </script>
+</head>
+<body>
+    <p class=" information"></p>
+</body>
+</html>
