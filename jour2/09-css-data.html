@@ -1,0 +1,68 @@
+<!-- 09-css-data.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- p*3>lorem4 -->
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Distinctio cum quam maiores.</p>
+    <p>Libero voluptas voluptate rerum!</p>
+
+    <!-- en html5 
+        introduit la possible pour les développeurs de créer leur propre attribut
+        étendre le langage via l'attribut data-*
+    -->
+    <h1 data-contenu-toto-tata="Bonjour les amis !" data-taille="40" data-url="https://google.fr"></h1>
+
+    <!-- mdn => attribut data -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // js natif
+        let jsNatif = document.querySelector("h1").dataset.contenuTotoTata; // camelCase : respecter les majuscules minuscule forme de dromadaire 
+        console.log(jsNatif) ;
+
+        let contenu = $("h1").data("contenu-toto");
+        let taille = $("h1").data("taille");
+        // stocker directement dans la balise html autant d'informations que vous voulez !! 
+
+        $("h1").css("font-size", taille).html(contenu);
+
+        $("h1")
+            .css("font-size" , $("h1").data("contenu-toto"))
+            .html($("h1").data("taille"));
+
+
+        // pour modifier l'aspect des p il faut utiliser la méthode css()
+        // 1er p => réaliser 
+        // ombre sur le texte
+        // changer sa couleur en grey 
+
+        $("p").first()
+              .css("text-shadow", "2px 2px 3px grey")
+              .css("color", "grey");
+
+        // si vous avez plusieurs règles css à attribut à une balise 
+        // vous pouvez utiliser des objets
+        // objet dans la variable style 
+        let style = {
+            "text-shadow" : "2px 2px 3px grey" ,
+            "color" :  "grey"
+         };
+
+         $("p").eq(1).css(style);
+
+         $("p").last().css({
+            "text-shadow" : "2px 2px 3px grey" ,
+            "color" :  "grey"
+         });
+         // 2 manières d'utiliser la méthode .css() de jQuery
+         // .css("regle-css":"valeur")
+         // .css( objet )
+    </script>
+</body>
+</html>
