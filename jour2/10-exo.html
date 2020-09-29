@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data-text="lorem ipsum" data-color="green" data-size="22"></p>
+    <p data-text="un peu de text"></p>
+    <p>je suis le troisième paragraphe</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+       let textP1 = $("p").first().data("text");
+       let colorP1 = $("p").first().data("color");
+       let sizeP1  = $("p").first().data("size");
+       //pour le premier p insérer le texte dans la balise et réaliser les mise en forme suivante 
+       // taille de police 22px et fond du p en vert
+       $("p").first().text(textP1).css("font-size", sizeP1).css("background", colorP1);
+       // autre syntaxe possible 
+       $("p").first().text(textP1).css({ "font-size" : sizeP1 , "background" :  colorP1  });
+       /*
+        pour le deuxième remplir avec le texte dans data-text et appliquer les mise en forme suivantes :
+            color rouge
+            largeur 100px
+            bordure arrondie 10px
+       */ 
+       let textP2 = $("p").eq(1).data("text");
+       let styleP2 = {
+        "color" : "red",
+        "width": 100, // écrire équivalente "100px"
+        "border-radius" : 10,
+        "border" : "1px solid black"
+       };
+       $("p").eq(1).text(textP2).css(styleP2);
+
+       // le dernier p utiliser le même style que le p précédent !
+       $("p").last().css(styleP2);
+    </script>
+</body>
+</html>
