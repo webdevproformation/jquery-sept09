@@ -15,6 +15,11 @@
     <script>
         $("p").hide().first().show();
 
+        // Virginie
+        $("p:gt(0)").hide();
+
+        // gt(0) = > greater(0) // strictement supérieur à 0
+
         $(".more").click(function(){
             $("p").eq(1).slideDown( 2000 , function(){
                 $("p").eq(2).slideDown( 3000 , function(){
@@ -25,3 +30,9 @@
     </script>
 </body>
 </html>
+<!-- 
+    essayer de faire une variante du système d'onglet 
+    show() et hide()
+    slideDown() et slideUp()
+    11-onglet-avance.html
+-->

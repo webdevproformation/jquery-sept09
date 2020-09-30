@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="onglet">
+        <header>
+            <button data-index="0">afficher onglet 1</button>
+            <button data-index="1">afficher onglet 2</button>
+            <button data-index="2">afficher onglet 3</button>
+        </header>
+        <div>
+            <p>Onglet 1 Lorem ipsum dolor sit amet.</p>
+            <p>Onglet 2 Esse quisquam id expedita dolorum!</p>
+            <p>Onglet 3 Sint molestias odio corporis velit.</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $("p").hide().first().show();
+        let indexOngletEncours = 0 ;
+
+        $("button").click(function(){
+            let indexDuBoutonClique = $(this).data("index");
+            $("p").eq(indexOngletEncours).slideUp( 2000 , function(){
+                $("p").eq(indexDuBoutonClique).slideDown( 1000, function(){
+                    indexOngletEncours = indexDuBoutonClique ;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
