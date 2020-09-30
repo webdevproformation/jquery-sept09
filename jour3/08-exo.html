@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="menu">Menu</button>
+    <ul>
+        <li>Accueil</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(".menu").click(function(){
+            $("ul").fadeToggle();
+        });
+        $("ul")
+            .css("display", "flex")  // met les items les uns à côtés des autres
+            .css("list-style" , "none"); // enlever les puces des items 
+                                        // list-style et non liste-style
+        $("li").css("margin-right" , 15 ) ;
+    </script>
+</body>
+</html>
