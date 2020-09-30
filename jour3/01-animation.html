@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 01-animation.html -->
+
+    <!-- button.btn$*3>{action$} -->
+    <button class="btn1">action1</button>
+    <button class="btn2">action2</button>
+    <button class="btn3">action3</button>
+
+    <!-- p.item$*3>lorem4 -->
+    <p class="item1">Lorem ipsum dolor sit.</p>
+    <p class="item2">Vel optio quisquam sed!</p>
+    <p class="item3">Exercitationem, reprehenderit temporibus! Nemo.</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // jquery dispose de quelques fonctions qui permet de réaliser des animation très facilement !! 
+        // 1ère animation : masquer un élément
+
+        // .hide()
+        // ressemble .css("display", "none") => masquer
+
+        $(".btn1").click(function(){
+            $(".item1").hide(); 
+            // le premier p disparait suit au clique 
+        });
+
+        // .show() => inverse de .hide() = afficher
+        // ressemble beaucoup .css("display", "block") => affiche un élément dans la page web
+
+        $(".item2").hide(); // par défaut on masque le 2ème p
+
+        $(".btn2").click(function(){
+            $(".item2").show();
+        });
+
+        // javascript => toggle 
+        // si un élement est masqué => afficher et si élement est affiché => masque
+
+        $(".btn3").click(function(){
+            $(".item3").toggle(); 
+        });
+        // .hide() .show() .toggle()
+    </script>
+</body>
+</html>
+<!-- 
+    hier on a fait un exo => menu burger 
+
+    créer le fichier 02-exo.html 
+
+    contient un bouton class menu 
+
+    via jQuery 
+    1 ajouter après le bouton qui a la class menu le html suivant
+
+    <ul class="menu-principal">
+        <li>Accueil</li>
+        <li>Contact</li>
+    </ul>
+
+    2 si je clique 1 fois sur le bouton qui a la class menu => masquer le menu principale
+    si je reclique sur le bouton menu => l'afficher 
+
+-->
