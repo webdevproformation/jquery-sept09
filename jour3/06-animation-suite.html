@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>action 1</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At culpa ad quisquam ab reprehenderit maxime unde facilis accusantium voluptatibus nisi animi provident odit magnam iusto, alias hic quaerat! Reiciendis, illum?</p>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $("button").click(function(){
+            $("p").fadeOut(5000);
+            // disparaitre en 5 secondes = 5000 millisecondes
+            // effet d'opacité 
+        });
+        // .hide()
+        // .show()
+        // .toggle()
+
+        // autres fonctions d'animation
+        // elles aussi vont permettre d'afficher et masquer une balise sélectionnée
+        // effet d'opacité 
+        // attention au camelCase => respectez la majuscule
+        // .fadeIn() => apparaitre
+        // .fadeOut() => disparaitre
+        // .fadeToggle()  apparaitre ou disparaitre
+
+        // autres fonctions d'animation
+        // elles aussi vont permettre d'afficher et masquer une balise sélectionnée
+        // effet de glissé 
+        // .slideDown()
+        // .slideUp()
+        // .slideToggle()
+    </script>
+</body>
+</html>
