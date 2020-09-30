@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="onglet">
+        <header>
+            <!-- button.btn$*3 -->
+            <button class="btn1" data-index="0">Onglet 1</button>
+            <button class="btn2" data-index="1">Onglet 2</button>
+            <button class="btn3" data-index="2">Onglet 3</button>
+        </header>
+        <div>
+            <p>Onglet 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati beatae reprehenderit dolores quasi optio fugiat iste quisquam vel? Laudantium odit autem ipsam, nostrum molestias quaerat ullam quam! Unde, at sed!</p>
+            <p>Onglet 2 Odio autem illo aperiam cumque dicta blanditiis et voluptates aut perspiciatis voluptatibus beatae quisquam omnis earum, quod nemo quasi nam provident, voluptatem optio nihil dolore eos quo. Voluptatum, vitae impedit.</p>
+            <p>Onglet 3 Tenetur dolore quam culpa tempora aliquid saepe? Nobis pariatur quod, qui saepe, explicabo, ullam excepturi dolores labore illo reprehenderit ipsa corporis sapiente atque enim deleniti quasi voluptates. Vero, nemo culpa!</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // système d'onglet 
+        // 3 boutons
+        // 3 zones en dessous
+        // si je clique le 2ème bouton 
+        // zone 1 et 3 sont masquées et la zone 2 est affichée
+        $(".onglet p")
+            .hide()
+            .first()
+            .show();
+        $(".onglet button").click(function(){
+            // masquer tous les p 
+            $(".onglet p").hide();
+            // récupére l'index du bouton sur lequel j'ai cliqué
+            // $(this) = sur les trois boutons => à celui sur lequel je viens de cliquer
+            let index = $( this ).data("index");
+            // j'affiche l'onglet concerné = qui a l'index du bouton cliqué !
+            $(".onglet p").eq(index).show();
+        } );
+    </script>
+</body>
+</html>
