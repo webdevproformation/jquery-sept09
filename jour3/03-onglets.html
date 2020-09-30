@@ -58,6 +58,18 @@
             // j'affiche l'onglet concerné = qui a l'index du bouton cliqué !
             $(".onglet p").eq(index).show();
         } );
+
+        //utiliser une boucle et un if 
+        $(".onglet button").click(function(){
+            let indexBouton = $( this ).data("index");
+            $(".onglet p").each(function(index , item){
+                if(index == indexBouton){
+                    $(".onglet p").eq(index).show();
+                }else{
+                    $(".onglet p").eq(index).hide();
+                }
+            })
+        } );
     </script>
 </body>
 </html>
