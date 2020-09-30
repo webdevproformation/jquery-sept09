@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // deux types de variables complexes 
+        // tableau 
+        let listeJour = ["lundi", "mardi", "mercredi"];
+
+        // objet
+        let article = {
+            titre : "article1",
+            dt_publication : "01/01/2020",
+            auteur : "Victor Hugo"
+        };
+
+        // variable super complexe = des objets dans un tableau 
+        let pageAccueil = [
+            { 
+                id : 1 ,
+                titre : "Découverte de javascript"
+            },
+            {
+                id : 2 ,
+                titre : "Initiation au DOM"
+            }
+         ];
+        
+         // JSON => variable ressemble enormément => JSON
+         // JavaScript Object Notation
+
+        let pageAccueilv2 = [
+            {
+                "id" : 1 ,
+                "titre" : "Découverte de javascript",
+                "contenu" : "toto"
+            },
+            {
+                "id" : 2 ,
+                "titre" : "Initiation au DOM" ,
+                "dt_publication" : "01/01:2020"
+            }
+        ] ;
+        // attention ne pas utiliser de quote simple ' ' ou de quote ``
+        // OBLIGATOIREMENT des quotes doubles " " partout sauf pour les chiffres 
+
+        // ressemble énormément à une base de données 
+        // base de données => informations qui sont stockées de manière structurées
+        // ressemble beaucoup à une petite base de données !!! 
+        // créer un nouveau fichier 15-data.json 
+        // écrit dans la fichier le tableau sans la variable et le =
+        // ainsi que le ; final
+
+        // charger .html => insérer dans une page .load()
+        // créer pour appeler des fichiers .json  => $.getJSON()
+        // premier paramètre de cette fonction le nom du fichier qui contient
+        // les données
+        // callback => fonction 
+        // la fonction callback a elle même un argument => resultat
+        // result // data // info => les fameuses données qui viennent d'être 
+        // récupérer 
+        $.getJSON("15-data.json" , function(resultat){
+            console.log(resultat);
+
+            // concaténation 
+            let html = "";
+            for(let i = 0 ; i <= 1 ; i++  ){
+                html += "<h1>" + resultat[ i ].titre + "</h1>";
+                html += "<p>" + resultat[i].id + "</p>" 
+            }
+            $("body").prepend(html);
+
+            // informatique 
+            // séparer les données 
+            // logique = traitement = concaténation
+        });
+        // API => encore un cran au dessus 
+    </script>
+</body>
+</html>

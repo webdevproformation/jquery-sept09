@@ -1,0 +1,12 @@
+[
+    {
+        "id" : 1 ,
+        "titre" : "Découverte de javascript",
+        "contenu" : "toto"
+    },
+    {
+        "id" : 2 ,
+        "titre" : "Initiation au DOM" ,
+        "dt_publication" : "01/01:2020"
+    }
+]
