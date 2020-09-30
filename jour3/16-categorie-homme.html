@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // charger le contenu du fichier 16-catalogue.json
+        $.getJSON("16-catalogue.json", function(produits){
+           
+            let contenuPage = "avec une boucle for classique";
+            // avec une boucle javacript classique 
+            for(let i = 0 ; i < 2 ; i++){
+                contenuPage += "<div>";
+                contenuPage += "<h2>" + produits[i].nom  +"</h2>";
+                contenuPage += "<p>" + produits[i].prix + "</p>"
+                contenuPage += "</div>";
+            }
+            
+            contenuPage += "avec une boucle each de jQuery";
+            // boucle en utilisant le each de jQuery 
+            $(produits).each(function(index, produit){
+                contenuPage += "<div>";
+                contenuPage += "<h2>" + produit.nom  +"</h2>";
+                contenuPage += "<p>" + produit.prix + "</p>"
+                contenuPage += "</div>";
+            });
+
+            $("body").html(contenuPage);
+        });
+    </script>
+</body>
+</html>
