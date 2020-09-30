@@ -46,14 +46,21 @@
         </div>
     </div>
 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440608135!2d2.292292614976702!3d48.858373608662994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1601458272461!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         // je vais masquer tous les onglets et j'affiche que le 1er
 
         $(".onglet-contenu").hide().first().show();
 
+        console.log($(".onglet-contenu"));
+        let i = 0
         $(".onglet button").click(function(){
             $(".onglet-contenu").hide();
+            //i++;
+            //console.log($(this)); // permet de savoir ce que contient la variable 
+            // console.log(i); // permet de savoir ce que contient la variable 
             let index = $(this).data("index"); 
             $(".onglet-contenu").eq(index).show();
         });
@@ -62,3 +69,26 @@
     </script>
 </body>
 </html>
+<!-- 
+    créer un nouveau fichier 05-exo.html 
+
+    dans la partie html système d'onglet 
+
+    <h1>Lieux à visiter à Paris !!</h1>
+
+    5 boutons 
+                Tour eiffel
+                Champ de Mars
+                Tour Montparnasse
+                Sacré Coeur
+                Buttes-Chaumont
+    et 
+    dans chaque onglet => 5 onglets
+        titre => le nom de la zone
+        google map ou un open street map intégré via une iframe
+
+    en jQuery => faire en sorte que le système fonctionne !
+
+
+
+-->
