@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2 boutons suivis de 4 paragraphes -->
+    <button>action1</button>
+    <button>action2</button>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Deserunt a eius maiores et.</p>
+    <p>Perferendis suscipit modi inventore. Molestias?</p>
+    <p>Veritatis commodi molestiae incidunt accusantium?</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // les méthodes d'animations, elle peuvent avoir deux paramètres 
+
+        $("button").first().click(function(){
+            // par défaut le masquage de la balise sélectionné => 0.5 secondes
+            // le premier paramètre définir la durée de masquage => millisecondes
+            // 2000 millisecondes => 2s
+            // possibilité d'jouter un deuxième paramètre 
+            // callback function(){}
+            // cette fonction sera déclenchée lorsque 
+            // la première animation sera finie
+            $("p").first().fadeOut( 1000 , function(){ 
+                $("p").eq(1).fadeOut( 2000 );
+            });
+            // enchainer 2 animations 
+        });
+
+        $("button").last().click(function(){
+            $("p").eq(2).slideUp( 3000 , function(){
+                $("p").last().slideUp( 2000 );
+            } );
+        });
+
+    </script>
+</body>
+</html>
