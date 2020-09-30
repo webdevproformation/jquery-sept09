@@ -6,7 +6,7 @@
     },
     {
         "id" : 2 ,
-        "titre" : "Initiation au DOM" ,
+        "titre" : "Initiation au DOM" , 
         "dt_publication" : "01/01:2020"
-    }
+    } 
 ]
