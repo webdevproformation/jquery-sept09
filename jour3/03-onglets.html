@@ -64,12 +64,18 @@
             let indexBouton = $( this ).data("index");
             $(".onglet p").each(function(index , item){
                 if(index == indexBouton){
-                    $(".onglet p").eq(index).show();
+                    $(item).eq(index).show();
                 }else{
-                    $(".onglet p").eq(index).hide();
+                    $(item).eq(index).hide();
                 }
             })
         } );
     </script>
 </body>
 </html>
+
+<!-- 
+    créer le fichier 04-exo.html
+
+
+-->
