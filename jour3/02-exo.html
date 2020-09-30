@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="menu"></button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        let menuPrincipal = "<ul class=\"menu-principal\">";
+            menuPrincipal += "<li>Accueil</li>";
+            menuPrincipal += "<li>Contact</li>";
+            menuPrincipal += "</ul>" ;
+        
+        $(".menu").after( menuPrincipal ).text("🍓") ;
+        
+        // icone dans emojipedia => 
+
+        $(".menu").click(function(){
+            $(".menu-principal").toggle();
+        }) ;
+    </script>
+</body>
+</html>
