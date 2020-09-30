@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Lorem, ipsum dolor sit amet consectetur  asperiores molestias accusamus debitis unde soluta ipsum sint, praesentium maiores perspiciatis qui laudantium beatae itaque totam id ducimus dolores?</p>
+
+     <button class="more">Suite</button>
+
+     <p>I Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non minus eaque earum iste! Labore, numquam.</p>
+
+     <p>II. Non minus eaque earum iste! Labore, numquam.</p>
+
+     <p>III.sit amet consectetur adipisicing elit. Non minus eaque earum iste! Labore, numquam.</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    
+    $("p").hide();
+    $("p").first().show();
+    /* $("button").click(function(){
+        for (let i = 1 ; i < 4 ; i++){
+            if (  i == 2 ){
+                // $("p").last().fadeToggle();
+            }
+            else{
+                $("p").eq(i).fadeToggle(1000 , function(){
+                    let j = i + 1.
+                    $("p").eq(j).fadeToggle();
+                }); 
+            }
+        } 
+        // je penses pas que ce soit 
+    }); */
+
+    $("button").click(function(){
+        $("p").eq(1).slideDown( 2000 , function(){
+            $("p").eq(2).slideDown( 3000 , function(){
+                $("p").last().fadeIn( 1500 );
+            } );
+        } );
+    });
+
+    /* s'appelle à l'infini */
+    let i = 0 ;
+    function hello(){
+        i++;
+        console.log(i)
+        setTimeout( function(){
+            hello()
+        }, 1000 )
+    }
+
+    hello();
+
+    // jeu video 
+    // personnage => faire bouger 
+    // montre, horloge 
+
+    </script>
+</body>
+</html>
