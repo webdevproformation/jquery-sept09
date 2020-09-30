@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat eos dolorem corrupti nostrum cum maxime, magnam, minima eaque perferendis veritatis tempora sint provident. Rem autem dolore sint et, at ut.</p>
+    <button class="more">Lire la suite</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste earum molestias consequatur enim numquam labore asperiores! Eos, id recusandae explicabo quaerat odio atque nam maiores unde repellat! Voluptates, saepe sapiente.</p>
+    <p>Rerum, officia et. Eligendi eaque provident odit eum accusantium assumenda illo ullam iure laboriosam delectus odio soluta alias eius possimus veritatis, dolor non consequatur dolore. Illo, doloribus. Totam, deserunt expedita.</p>
+    <p>Pariatur optio voluptatibus voluptas, et reprehenderit dignissimos nulla sunt non a excepturi natus laborum iure? Cumque temporibus explicabo voluptatibus accusantium recusandae. Eum deserunt amet mollitia ut earum! Fuga, praesentium architecto.</p>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $("p").hide().first().show();
+
+        $(".more").click(function(){
+            $("p").eq(1).slideDown( 2000 , function(){
+                $("p").eq(2).slideDown( 3000 , function(){
+                    $("p").last().fadeIn( 1500 );
+                } );
+            } );
+        });
+    </script>
+</body>
+</html>
