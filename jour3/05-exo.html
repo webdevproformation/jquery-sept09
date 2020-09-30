@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lieux à visiter à Paris !!</h1>
+    <div class="onglet">
+        <header>
+            <button data-index="0">Tour Eiffel</button>
+            <button data-index="1">Champ de Mars</button>
+            <button data-index="2">Tour Montparnasse</button>
+            <button data-index="3">Sacré Coeur</button>
+            <button data-index="4">Buttes-Chaumont</button>
+        </header>
+        <div>
+            <div class="lieu">
+                <h2></h2>
+                <!--  le titre va être ajouté via jquery-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440608135!2d2.292292614976702!3d48.858373608662994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1601459640800!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="lieu">
+                <h2></h2>
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=2.2816371917724614%2C48.84850731700475%2C2.3139953613281254%2C48.86381134898791&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=15/48.8562/2.2978">Afficher une carte plus grande</a></small>
+            </div>
+            <div class="lieu">
+                <h2></h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.842575570727!2d2.3197627149759903!3d48.84214140980587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671ccae002451%3A0xfc04ff9c1b1c593c!2sTour%20Montparnasse!5e0!3m2!1sfr!2sfr!4v1601459695319!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="lieu">
+                <h2></h2>
+                <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=2.342016398906708%2C48.886317701668816%2C2.344038784503937%2C48.88727361816431&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/48.88680/2.34303">Afficher une carte plus grande</a></small>
+            </div>
+            <div class="lieu">
+                <h2></h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10495.464054545091!2d2.373312980333914!3d48.87983073012841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66dc31398baa7%3A0xddb22524d7f011b1!2sButtes-Chaumont%2C%2075019%20Paris!5e0!3m2!1sfr!2sfr!4v1601459753032!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // masquer toutes les cartes et je les masque
+
+        $(".lieu").hide().first().show();
+
+        $(".onglet button").click(function(){
+            // 1 masque tous les lieux 
+            $(".lieu").hide();
+
+            //2  récupérer la data-index 
+            let index = $(this).data("index");
+            let text = $(this).text();
+
+            // 3 afficher le bon contenu
+            $(".lieu").eq(index).show();
+
+            // Mettre à jour le titre dans le contenu affiché  
+            $(".lieu").eq(index).find("h2").html( text );
+            
+        })
+    </script>
+</body>
+</html>
