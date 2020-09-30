@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 07-animation.html -->
+    <button class="action1">Action 1</button>
+    <button class="action2">Action 2</button>
+
+    <p class="p1">Lorem, ipsum.</p>
+    <p class="p2">Lorem ipsum dolor sit.</p>
+    <!--  attention les class doivent commencer par une lettre, pas par un chiffre -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // je clique sur le 1er bouton 
+        // alors masquer le 1er p avec un effet d'opacité
+        $(".action1").click(function(){
+            // $(".p1").fadeOut() ; // juste masquer
+            $(".p1").fadeToggle(); // si c'est masqué => afficher // si c'est affiché => masquer
+        });
+
+        // je clique sur le 2eme bouton 
+        // alors masquer le 2eme p avec un effet glissé
+
+        $(".action2").click(function(){
+            // $(".p2").slideUp() ; // juste masquer
+            $(".p2").slideToggle() ;  // si c'est masqué => afficher // si c'est affiché => masquer
+        });
+        // dites moi quand c'est bon 
+
+        // continuer sur les fonctions de jquery 
+        // animation facilement
+        // 9 principales fonctions d'animation 
+
+        // .show() // .hide() // .toggle()
+
+        // .fadeIn() // .fadeOut()  // .fadeToggle()
+
+        // .slideDown() // .slideUp() // .slideToggle()
+    </script>
+</body>
+</html>
