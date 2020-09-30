@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="onglets">
+     <h1>Lieux à visiter à Paris !!</h1>
+     <button data-index="0" >Tour Eiffel</button>
+     <button data-index="1">Champ de Mars</button>
+     <button data-index="2">Tour Montparnasse</button>
+     <button data-index="3">Sacré Coeur</button>
+     <button data-index="4">Buttes-Chaumont</button>
+
+     <div   data-index="0">
+         <h2></h2>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.121232329777!2d2.295898815411855!3d48.85589857928722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67193191bb689%3A0x769afe1932581eb3!2sTour%20eiffel!5e0!3m2!1sfr!2sfr!4v1601459230673!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+     </div>
+     <div   data-index="1">
+        <h2></h2>
+
+    </div>
+    <div  data-index="2">
+        <h2></h2>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10504.30102134459!2d2.323005787269782!3d48.837703218565316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c7ec66755b%3A0xc9c5e482069c4490!2sMontparnasse%2C%2075014%20Paris!5e0!3m2!1sfr!2sfr!4v1601459160215!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+    </div>
+    <div   data-index="3">
+        <h2></h2>
+
+    </div>
+    <div   data-index="4">
+        <h2></h2>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+           $(".onglets div ")
+            .hide()
+            .first()
+            .show();
+
+            // $("h2")
+            // .hide()
+            // .first()
+            // .show();
+    
+       $(".onglets button").click(function(){
+        // masquer tous les p 
+        $(".onglets div").hide();
+        //$("h2").hide();
+
+        // récupére l'index du bouton sur lequel j'ai cliqué
+        // $(this) = sur les trois boutons => à celui sur lequel je viens de cliquer
+        let index = $( this ).data("index");
+        // j'affiche l'onglet concerné = qui a l'index du bouton cliqué !
+        $(".onglets div").eq(index).show();
+        
+        $("h2").eq(index).html($(this).html());
+        console.log($(this).html());
+        $(".onglets div").eq(index).find("h2").html($(this).html());
+        console.log($("h2").eq(index));
+        //$("h2").eq(index).show();
+    } );
+
+ 
+    </script>
+
+</body>
+</html>
+<!-- 
+dans la partie html système d'onglet 
+    <h1>Lieux à visiter à Paris !!</h1>
+
+    et 
+    dans chaque onglet => 5 onglets
+        titre => le nom de la zone
+        google map ou un open street map intégré via une iframe -->
+    <!-- en jQuery => faire en sorte que le système fonctionne ! -->
