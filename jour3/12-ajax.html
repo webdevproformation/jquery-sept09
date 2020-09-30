@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="12-style.css">
+</head>
+<body>
+    <header></header>
+    <p>page d'accueil</p>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // AJAX 
+        // Asynchrone 
+        // Javascript
+        // And
+        // XML 
+        // innovation qui a été introduit dans les années 2000
+        // permet au navigateur d'importer des informations qui sont stockées sur votre ordinateur ou sur une autre machine 
+        // dans jQuery 
+        // plusieurs manières d'utiliser AJAX 
+        // .load()
+        // .getJSON()
+        // .get() // .post()
+        // .ajax()
+        // j'ai une balise header => je veux remplir cette balise avec du html
+        // qui est stocké sur une autre fichier 12-entete.html
+        // attention bien stocker le fichier 
+        // 12-entete.html dans le même dossier que 
+        // 12-ajax.html 
+        // 12-pied-page.html
+
+        $("header").load("12-entete.html");
+        // le contenu de 12-entete.html est réutilisé
+        // dans la page d'accueil 
+        // si j'ai une mise à jour à faire 
+        $("footer").load("12-pied-page.html");
+
+    </script>
+</body>
+</html>
