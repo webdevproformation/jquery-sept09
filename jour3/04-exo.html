@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- générer du html pour avoir un système d'onglet -->
+    <div class="onglet">
+        <header>
+            <button data-index="0">Afficher texte</button>
+            <button data-index="1">Afficher image</button>
+            <button data-index="2">Afficher liste</button>
+            <button data-index="3">Afficher video Youtube</button>
+        </header>
+        <div>
+            <div class="onglet-contenu">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consequuntur dignissimos laborum voluptatem voluptate nam asperiores illo, quidem perspiciatis corrupti corporis natus ipsam nesciunt temporibus necessitatibus suscipit. Illum, asperiores quaerat!</p>
+            </div>
+            <div class="onglet-contenu">
+                <img src="https://via.placeholder.com/400x200" alt="">
+            </div>
+            <div class="onglet-contenu">
+                <ul>
+                    <li>Lundi</li>
+                    <li>Mardi</li>
+                    <li>Mercredi</li>
+                </ul>
+            </div>
+            <div class="onglet-contenu">
+                <!--  vidéo Youtube => google => youtube > partager > Intégrer > copier le balise iframe et la coller dans mon système d'onglet -->
+                <h1>découverte de jQuery</h1>
+                <p>voici une vidéo sur le sujet : </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pwz7GbBn8vE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- 
+                    Youtube => modèle Economique => Afficher des publicités
+                    que la = publicité soit affiché directement depuis son site ou depuis un autre 
+                    => rapporte de l'argent 
+                    + 
+                    créateur de la vidéo => met en ligne option refuser le partage 
+                    => l'option pour le partage => ça lui fait de la communication gratuite sur son travail + revenu
+                    => personnellement je n'ai jamais vu de vidéo sans ce bouton 
+                -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // je vais masquer tous les onglets et j'affiche que le 1er
+
+        $(".onglet-contenu").hide().first().show();
+
+        $(".onglet button").click(function(){
+            $(".onglet-contenu").hide();
+            let index = $(this).data("index"); 
+            $(".onglet-contenu").eq(index).show();
+        });
+        // article => mdn 
+        // équivalent div ou article => contexte d'un onglet 
+    </script>
+</body>
+</html>
