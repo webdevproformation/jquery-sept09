@@ -1,0 +1,40 @@
+[
+    {
+
+        "id" : 2,
+        "nom" : "pantalon",
+        "prix" : 14.7
+    },
+    {
+        "id ": 2,
+        "nom" : "chemise",
+        "prix": 40
+    }
+]
+
+------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+
+        $.getJSON("16-catalogue.json", function(result){
+            console.log(result);
+            let catalogue = "" ;
+            for(let i = 0 ; i < 2; i++) {
+                catalogue += "<div>";
+                catalogue +=  "<h2>" + result[i].nom + " </h2>";
+                catalogue += "<p>" + result[i].prix + "</p>";
+                catalogue += "</div>";
+            }
+            $("body").html(catalogue) ;
+        });
+    </script>
+</body>
+</html>

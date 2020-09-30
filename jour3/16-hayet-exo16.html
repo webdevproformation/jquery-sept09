@@ -1,0 +1,40 @@
+[
+    {"id" : 1, "livre" : "Livre AAAA" , "prix" : 15.5 },
+    {"id" : 2, "livre" : "Livre BBBB" , "prix" : 20 },
+    {"id" : 3, "livre" : "Livre CCCC" , "prix" : 16}
+]
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div>
+        
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    // 3
+  
+      $.getJSON( "16-catalogue.json" , function( resultat ){
+            console.log(resultat);
+            let html = "";
+            // concaténation 
+            for(let i = 0 ; i < 2 ; i++  ){
+                html += "<div>"
+                html += "<h2>" + resultat[ i ].livre + "</h2>";
+                html += "<h2>" + resultat[ i ].prix + "</h2>";
+                html += "</div>"
+            }
+            $("body").html();
+      });
+
+     
+    </script>
+</body>
+</html>
+ 

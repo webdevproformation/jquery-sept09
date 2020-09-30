@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $.getJSON("16-virginie-catalogue.json", function (resultat) {
+      console.log(resultat)
+      let html = "";
+      for (let i = 0; i < 2; i++) {
+        html += "<div>";
+        html += "<h2>" + resultat[ i ].nom + "</h2>";
+        html += "<p>" +
+          resultat[i].prix + "</p>";
+        html += "</div>";
+      }
+      $("body").html(html);
+    });
+  </script>
+</body>
+</html>
+
