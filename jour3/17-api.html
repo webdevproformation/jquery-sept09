@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         // hier 
@@ -35,7 +39,45 @@
         // https://jsonplaceholder.typicode.com/
 
         // https://jsonplaceholder.typicode.com/posts
-        
+
+        // hier
+        //$.getJSON("fichier.json" , function(){})
+
+        // aujourd'hui 
+        // traitement 
+        $.getJSON("https://jsonplaceholder.typicode.com/posts" , function(reponse){
+            console.log(reponse);
+            // dans la variable reponse => tableau qui contient 100 objets 
+            let htmlPage = "";
+
+            $(reponse).each(function(index , item){
+                htmlPage += "<h2>"+item.title+"</h2>";
+                htmlPage += "<p>"+ item.body +"</p>";
+                htmlPage += "<hr>";
+            });
+
+            $("body").prepend(htmlPage);
+        });
+
+        /// $("h3") <= tableau 
+        let a = [ "h3" , "h3" , "h3" ]
+
+        // manière classique
+        for(let i = 0 ; i < 3 ; i++ ){
+            a[ i ]
+        }
+        // manière classique dynamique 
+        for(let i = 0 ; i < a.length ; i++ ){
+            a[ i ]
+        }
+        // autre manière de faire via jquery 
+        // en PHP => foreach(){}
+        // pas besoin de dire le minimum // la maximum // increment 
+        // par contre lui dire // créer deux variables index // element
+        $(a).each(function( i  , item ){
+            item === a[ i ]
+        });
+
     </script>
 </body>
 </html>
